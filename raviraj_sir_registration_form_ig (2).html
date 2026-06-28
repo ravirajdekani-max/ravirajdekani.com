@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Raviraj Sir – Digital Skills Registration</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Gujarati:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  :root{
+    --ig1:#FEDA75;
+    --ig2:#FA7E1E;
+    --ig3:#D62976;
+    --ig4:#962FBF;
+    --ig5:#4F5BD5;
+    --ig-gradient: linear-gradient(135deg, var(--ig1), var(--ig2), var(--ig3), var(--ig4), var(--ig5));
+  }
+
+  body {
+    background: linear-gradient(135deg, #fdf3e7 0%, #fbe7f0 50%, #eee6fb 100%);
+    font-family: 'Poppins', 'Noto Sans Gujarati', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 480px;
+    padding: 4px;
+    box-shadow: 0 20px 60px rgba(150,47,191,.18);
+    background: var(--ig-gradient);
+  }
+  .card-inner{
+    background:#fff;
+    border-radius:21px;
+    padding: 34px 26px 30px;
+  }
+
+  .ig-icon{
+    width:54px;height:54px;border-radius:16px;
+    background: var(--ig-gradient);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 14px;
+  }
+
+  .title {
+    font-size: 21px;
+    font-weight: 800;
+    background: var(--ig-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    color: #6b7280;
+    text-align: center;
+    margin-bottom: 24px;
+    font-family: 'Noto Sans Gujarati', sans-serif;
+  }
+
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .field { margin-bottom: 16px; }
+  .field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+    font-family: 'Noto Sans Gujarati', sans-serif;
+  }
+  .field input,
+  .field select {
+    width: 100%;
+    background: #fdf6f9;
+    border: 1.5px solid #f3d4e4;
+    border-radius: 12px;
+    padding: 14px 14px;
+    color: #1e293b;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .field input:focus,
+  .field select:focus {
+    border-color: #D62976;
+    box-shadow: 0 0 0 3px rgba(214,41,118,.12);
+  }
+  .field input::placeholder { color: #b3a3ab; }
+  .field select option { background: #fff; color: #1e293b; }
+
+  .btn {
+    width: 100%;
+    background: var(--ig-gradient);
+    border: none;
+    border-radius: 14px;
+    padding: 16px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+    box-shadow: 0 8px 24px rgba(150,47,191,.3);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .btn:active { transform: scale(.97); }
+  .btn:hover { box-shadow: 0 12px 32px rgba(150,47,191,.4); }
+
+  .success {
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+    animation: fadeUp .4s ease;
+  }
+  @keyframes fadeUp {
+    from { opacity:0; transform: translateY(16px); }
+    to   { opacity:1; transform: translateY(0); }
+  }
+  .success .tick { font-size: 64px; display: block; margin-bottom: 16px; }
+  .success h3 {
+    font-size: 22px;
+    background: var(--ig-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 10px;
+  }
+  .success p { font-size: 14px; color: #6b7280; line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-inner">
+    <div id="formSection">
+      <div class="ig-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </div>
+      <div class="title">🚀 Digital Skills શીખો,<br>ઘરે બેઠા કમાઓ!</div>
+      <div class="subtitle">🎯 તમારી જિંદગી બદલવાનો સમય આવી ગયો છે!</div>
+
+      <div class="field">
+        <label>👤 તમારું પૂરું નામ (Full Name) *</label>
+        <input type="text" id="cf_fullname" placeholder="Full Name">
+      </div>
+
+      <div class="field">
+        <label>📱 મોબાઇલ નંબર (WhatsApp Number) *</label>
+        <input type="tel" id="cf_phone" placeholder="Number" maxlength="10">
+      </div>
+
+      <div class="row2">
+        <div class="field">
+          <label>🎂 ઉંમર (Age) *</label>
+          <input type="number" id="cf_age" placeholder="16-35" min="15" max="60">
+        </div>
+        <div class="field">
+          <label>⚧ જાતિ (Gender) *</label>
+          <select id="cf_gender">
+            <option value="">પસંદ કરો</option>
+            <option>પુરૂષ (Male)</option>
+            <option>સ્ત્રી (Female)</option>
+            <option>અન્ય (Other)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>💼 તમે અત્યારે શું કરો છો? / વ્યવસાય (Profession) *</label>
+        <select id="cf_profession">
+          <option value="">પસંદ કરો</option>
+          <option>વિદ્યાર્થી (Student)</option>
+          <option>નોકરીયાત (Working Professional)</option>
+          <option>ગૃહિણી (Housewife)</option>
+          <option>બિઝનેસ માલિક (Business Owner)</option>
+          <option>ફ્રીલાન્સર (Freelancer)</option>
+          <option>બેરોજગાર (Unemployed)</option>
+          <option>અન્ય (Other)</option>
+        </select>
+      </div>
+
+      <button class="btn" onclick="submitForm()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        WhatsApp પર મોકલો
+      </button>
+    </div>
+
+    <div class="success" id="successSection">
+      <span class="tick">✅</span>
+      <h3>Form Submit થઈ ગઈ!</h3>
+      <p>WhatsApp opening...<br>Send button press કરો</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function submitForm() {
+  var fullname = document.getElementById('cf_fullname').value.trim();
+  var phone  = document.getElementById('cf_phone').value.trim();
+  var age    = document.getElementById('cf_age').value.trim();
+  var gender = document.getElementById('cf_gender').value;
+  var prof   = document.getElementById('cf_profession').value;
+
+  if (!fullname || !phone || !age || !gender || !prof) {
+    alert('⚠️ બધા fields ભરો!'); return;
+  }
+  if (phone.length !== 10) {
+    alert('⚠️ Valid 10-digit number enter karo!'); return;
+  }
+
+  var yourNumber = '918347281744';
+
+  var msg = 'નમસ્તે! Raviraj Sir 💰🚀😍\nમને ડિજિટલ સ્કિલ અને ડિજિટલ માર્કેટિંગ માં રસ છે. કૃપા કરીને વિગતો શેર કરો.\n\n'
+    + '👤 *નામ (Name):* ' + fullname + '\n'
+    + '📱 *WhatsApp:* ' + phone + '\n'
+    + '🎂 *ઉંમર (Age):* ' + age + '\n'
+    + '⚧ *જાતિ (Gender):* ' + gender + '\n'
+    + '💼 *વ્યવસાય (Profession):* ' + prof + '\n\n'
+    + 'કૃપા કરીને મને આગળ ની માહિતી આપો🥂✅!';
+
+  document.getElementById('formSection').style.display = 'none';
+  document.getElementById('successSection').style.display = 'block';
+
+  setTimeout(function() {
+    window.open('https://wa.me/' + yourNumber + '?text=' + encodeURIComponent(msg), '_blank');
+  }, 600);
+}
+</script>
+</body>
+</html>
